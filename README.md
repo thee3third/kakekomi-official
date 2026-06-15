@@ -45,7 +45,7 @@ kakekomi-official/
 
 ## 公開前にやること（TODO）
 
-1. **メール送信先の設定** … 全ページの `example@gmail.com` を実アドレスへ全置換。
+1. **メール送信先** … `mailto:` の宛先は `thee3third@gmail.com` に設定済み。
    フォーム送信は静的ホスティングでは動かないため、Formspree 等の利用を推奨（`contact.html` 内コメント参照）。
 2. **Instagramアカウント** … 公開済みか確認（`hp_kakekomidera`）。
 3. **OGP画像** … `assets/img/ogp.png`（1200×630）を用意（`assets/img/ogp-placeholder.txt` 参照）。
