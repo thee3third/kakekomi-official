@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- @parts: head-common（差し替え：title / description / og:url / og:image）
+       他ページへ複製する際は title・description・og:title・og:description・og:url を変更する。 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップ｜山梨HPかけこみ寺</title>
+  <meta name="description" content="山梨の小さなお店に、ホームページを。安心の価格・ヒアリングから制作まで一気通貫・公開後の更新管理まで。作って終わりにせず、ずっと一緒に守ります。山梨全域対応。">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="山梨HPかけこみ寺">
+  <meta property="og:title" content="山梨HPかけこみ寺｜そのお店の灯りを、ネットにも。">
+  <meta property="og:description" content="山梨の小さなお店のためのホームページ制作。安心の価格・一気通貫・作って終わりにしない更新管理。山梨全域対応。">
+  <meta property="og:url" content="./index.html">
+  <meta property="og:image" content="./assets/img/ogp.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- /@parts -->
+</head>
+<body>
+  <!-- @parts: header（差し替え：ロゴ画像 assets/img/logo.svg・屋号・ナビ。全ページ共通＝同一HTMLを複製）
+       現在ページのナビには aria-current="page" を付ける。 -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <p class="brand">
+        <a href="index.html">
+          <img class="brand__logo" src="assets/img/logo.svg" alt="" width="38" height="38">
+          <span class="brand__name">山梨HPかけこみ寺<span class="sub">YAMANASHI HP KAKEKOMIDERA</span></span>
+        </a>
+      </p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="globalNav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav" id="globalNav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="index.html" aria-current="page">トップ</a></li>
+          <li><a href="service.html">サービス・料金</a></li>
+          <li><a href="works.html">制作実績</a></li>
+          <li><a href="about.html">かけこみ寺について</a></li>
+          <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- /@parts -->
+
+  <main>
+    <!-- ヒーロー（FV）：理念のメッセージ＝サイトの背骨。
+         メインコピーは明朝で大きく、サブは小さめに。 -->
+    <section class="hero">
+      <div class="hero__inner reveal">
+        <span class="hero__badge">山梨全域対応 ／ 小さなお店のホームページ屋</span>
+        <h1 class="hero__catch">そのお店の<span class="lamp em">灯り</span>を、<br>ネットにも。</h1>
+        <p class="hero__sub">山梨の小さなお店に、ホームページを。作って終わりにせず、ずっと一緒に守ります。</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="service.html">料金とサービスを見る</a>
+          <a class="btn btn--ghost btn--lg" href="contact.html">まずは相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 理念のひとこと（駆け込み寺の世界観） -->
+    <section class="section--tight section--alt">
+      <div class="container container--narrow">
+        <p class="quote reveal">困ったときに、いつでも<span class="em">駆け込める</span>場所でありたい。<br>ホームページのことは、ぜんぶこちらへ。</p>
+      </div>
+    </section>
+
+    <!-- @parts: strength-cards（差し替え：3つの強みの番号・見出し・本文）
+         サイトの3本柱。2番目「一気通貫」が最大の差別化なので強調表示（--hero）。 -->
+    <section class="section" id="strength" aria-labelledby="strength-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="section-head__en">OUR STRENGTH</span>
+          <h2 class="section-head__ja" id="strength-title">かけこみ寺の3つの強み</h2>
+        </header>
+        <div class="strength-grid">
+
+          <article class="strength reveal">
+            <span class="strength__no">壱</span>
+            <h3 class="strength__title"><span class="lead-word">安心の価格</span></h3>
+            <p class="strength__desc">一般の制作会社より、毎月のランニングコストも含めて安価に。小さなお店が、無理なく持ちつづけられる料金にこだわっています。</p>
+          </article>
+
+          <article class="strength strength--hero reveal">
+            <span class="strength__badge">最大の強み</span>
+            <span class="strength__no">弐</span>
+            <h3 class="strength__title"><span class="lead-word">一気通貫</span></h3>
+            <p class="strength__desc">ヒアリングから制作まで、最初から最後まで同じ人間が担当。間に伝言ゲームが入らないので、あなたの構想にいちばん近いものができあがります。</p>
+          </article>
+
+          <article class="strength reveal">
+            <span class="strength__no">参</span>
+            <h3 class="strength__title"><span class="lead-word">作って終わりにしない</span></h3>
+            <p class="strength__desc">屋号の通り、公開してからが本番です。更新や管理を月額でお引き受けし、あなたのホームページをずっと守りつづけます。</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- /@parts -->
+
+    <!-- 料金の概要（詳細は service.html へ） -->
+    <section class="section section--alt" id="fee" aria-labelledby="fee-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="section-head__en">PRICE</span>
+          <h2 class="section-head__ja" id="fee-title">わかりやすい料金</h2>
+        </header>
+        <div class="fee-summary reveal">
+          <div class="fee-summary__grid">
+            <div class="fee-pill">
+              <p class="fee-pill__label">制作費（初期・一度きり）</p>
+              <p class="fee-pill__price">88,000<small>円〜</small></p>
+              <p class="fee-pill__note">ページ構成のご相談込み</p>
+            </div>
+            <div class="fee-pill">
+              <p class="fee-pill__label">月額（更新・管理）</p>
+              <p class="fee-pill__price">6,600<small>円</small></p>
+              <p class="fee-pill__note">公開後もずっとお守りします</p>
+            </div>
+            <div class="fee-pill fee-pill--momo">
+              <p class="fee-pill__label">開業記念モニター</p>
+              <p class="fee-pill__price">66,000<small>円</small></p>
+              <p class="fee-pill__note">先着3店舗かぎり</p>
+            </div>
+          </div>
+          <p class="center" style="margin-top:var(--space-5)">
+            <a class="btn btn--primary" href="service.html">料金シミュレーターで試算する →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- @parts: works-grid（トップ用ダイジェスト。詳細は works.html）
+         実績/サンプルを抜粋。サンプルには明記し、外部リンクは別タブ。 -->
+    <section class="section" id="works" aria-labelledby="works-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="section-head__en">WORKS</span>
+          <h2 class="section-head__ja" id="works-title">制作実績</h2>
+        </header>
+        <div class="works-grid">
+
+          <a class="work-card reveal" href="https://example.com/" target="_blank" rel="noopener">
+            <div class="work-card__media">
+              <span class="work-card__tag work-card__tag--real">実績</span>
+              <div class="ph ph--ai"><span class="ph__label"><strong>カーオーディオ専門店</strong>店舗外観・施工事例の俯瞰</span></div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__kind">カーオーディオ専門店</span>
+              <h3 class="work-card__title">実際の制作事例</h3>
+              <p class="work-card__desc">こだわりの施工内容と来店予約導線を整理。お店の世界観を伝えるサイトに。</p>
+              <span class="work-card__link">サイトを見る ↗</span>
+            </div>
+          </a>
+
+          <a class="work-card reveal" href="../izakaya-sample/index.html" target="_blank" rel="noopener">
+            <div class="work-card__media">
+              <span class="work-card__tag work-card__tag--sample">制作例（サンプル）</span>
+              <div class="ph"><span class="ph__label"><strong>居酒屋サンプル</strong>夜の店内・炭火イメージ</span></div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__kind">飲食店（居酒屋）</span>
+              <h3 class="work-card__title">炭火とビール 灯り屋</h3>
+              <p class="work-card__desc">スマホで電話・地図にすぐ飛べる、飲食店向けの構成例です（架空の店舗）。</p>
+              <span class="work-card__link">サンプルを見る ↗</span>
+            </div>
+          </a>
+
+          <a class="work-card reveal" href="../momoen-sample/index.html" target="_blank" rel="noopener">
+            <div class="work-card__media">
+              <span class="work-card__tag work-card__tag--sample">制作例（サンプル）</span>
+              <div class="ph ph--momo"><span class="ph__label"><strong>桃農園サンプル</strong>桃畑・収穫の様子</span></div>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__kind">農園・通販</span>
+              <h3 class="work-card__title">桃農園サイト</h3>
+              <p class="work-card__desc">旬の品種紹介と直売・通販の案内をまとめた、農園向けの構成例です（架空の農園）。</p>
+              <span class="work-card__link">サンプルを見る ↗</span>
+            </div>
+          </a>
+
+        </div>
+        <p class="center" style="margin-top:var(--space-5)">
+          <a class="btn btn--ghost" href="works.html">制作実績をすべて見る →</a>
+        </p>
+      </div>
+    </section>
+    <!-- /@parts -->
+
+    <!-- こんな駆け込み歓迎 -->
+    <section class="section section--alt" id="welcome" aria-labelledby="welcome-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="section-head__en">WELCOME</span>
+          <h2 class="section-head__ja" id="welcome-title">こんな駆け込み、歓迎です</h2>
+        </header>
+        <div class="welcome-list">
+          <div class="welcome reveal"><span class="welcome__ico">灯</span><p><b>とにかく安く始めたい。</b>大きな会社は予算が合わなかった——そんなお店こそお気軽に。</p></div>
+          <div class="welcome reveal"><span class="welcome__ico">灯</span><p><b>パソコンが苦手。</b>専門用語は使いません。更新もこちらでお引き受けします。</p></div>
+          <div class="welcome reveal"><span class="welcome__ico">灯</span><p><b>何から相談していいか分からない。</b>ふんわりした「こうしたい」から一緒に形にします。</p></div>
+          <div class="welcome reveal"><span class="welcome__ico">灯</span><p><b>前に作ったまま放置している。</b>古いサイトの作り直し・引っ越しのご相談も。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 問い合わせ導線（Instagram / メール） -->
+    <section class="section" aria-labelledby="contact-cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 id="contact-cta-title">まずは、気軽に駆け込んでください</h2>
+          <p>ご相談は無料です。「こんなお店をやっています」だけでも大丈夫。InstagramのDM、またはメールでお気軽にどうぞ。</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--momo btn--lg" href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener"><span class="btn__ico">📷</span>InstagramでDM</a>
+            <!-- メール送信先は後日設定。下記 mailto: のアドレスを正式なものに差し替える。 -->
+            <a class="btn btn--ghost btn--lg" href="mailto:example@gmail.com?subject=ホームページのご相談" style="color:#fff;border-color:rgba(255,255,255,.5)"><span class="btn__ico">✉</span>メールで相談</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @parts: footer（全ページ共通＝同一HTMLを複製。
+       プライバシー方針：本名・顔・住所番地・電話は出さない。連絡はInstagram/メールのみ。） -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h3>山梨HPかけこみ寺</h3>
+          <p>山梨の小さなお店のためのホームページ屋。<br>作って終わりにせず、公開後もずっと一緒に守ります。</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="フッターメニュー">
+          <h3>メニュー</h3>
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="service.html">サービス・料金</a></li>
+            <li><a href="works.html">制作実績</a></li>
+            <li><a href="about.html">かけこみ寺について</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>運営・お問い合わせ</h3>
+          <dl>
+            <dt>運営</dt><dd>山梨HPかけこみ寺</dd>
+            <dt>所在</dt><dd>山梨県市川三郷町（詳細非公開）</dd>
+            <dt>対応</dt><dd>山梨全域</dd>
+            <dt>連絡</dt><dd><a href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener">Instagram @hp_kakekomidera</a> ／ メール</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="footer-note">
+        © <strong>山梨HPかけこみ寺</strong> ／ 顔は出していませんが、最初から最後まで同じ人間が責任を持って対応します。<br>
+        お電話の窓口は設けておりません。ご連絡はInstagramのDMまたはメールでお願いいたします。
+      </p>
+    </div>
+  </footer>
+  <!-- /@parts -->
+
+  <!-- @parts: action-bar（差し替え：InstagramURL・mailto:。スマホのみ表示。電話ボタンは作らない） -->
+  <nav class="action-bar" aria-label="クイック連絡">
+    <a class="action-bar__insta" href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener"><span class="action-bar__ico">📷</span>Instagram</a>
+    <a class="action-bar__mail" href="mailto:example@gmail.com?subject=ホームページのご相談"><span class="action-bar__ico">✉</span>メール</a>
+  </nav>
+  <!-- /@parts -->
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

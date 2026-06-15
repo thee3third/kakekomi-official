@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="山梨HPかけこみ寺">
+  <!-- favicon：藍地に桃の灯り＋「寺」。logo.svg と統一。 -->
+  <defs>
+    <radialGradient id="lampf" cx="50%" cy="40%" r="62%">
+      <stop offset="0%"  stop-color="#FCE3E6"/>
+      <stop offset="55%" stop-color="#F2A3AB"/>
+      <stop offset="100%" stop-color="#E07F89"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#27406B"/>
+  <circle cx="32" cy="30" r="18" fill="url(#lampf)"/>
+  <text x="32" y="40" text-anchor="middle"
+        font-family="'Shippori Mincho','Yu Mincho',serif"
+        font-size="26" font-weight="700" fill="#FCFAF6">寺</text>
+</svg>

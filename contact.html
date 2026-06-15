@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- @parts: head-common -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜山梨HPかけこみ寺</title>
+  <meta name="description" content="ご相談は無料です。InstagramのDM、またはメールフォームからお気軽にどうぞ。お電話の窓口は設けておりません。山梨全域対応。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="山梨HPかけこみ寺">
+  <meta property="og:title" content="お問い合わせ｜山梨HPかけこみ寺">
+  <meta property="og:description" content="InstagramのDM、またはメールでお気軽にご相談ください。ご相談は無料です。">
+  <meta property="og:url" content="./contact.html">
+  <meta property="og:image" content="./assets/img/ogp.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- /@parts -->
+</head>
+<body>
+  <!-- @parts: header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <p class="brand">
+        <a href="index.html">
+          <img class="brand__logo" src="assets/img/logo.svg" alt="" width="38" height="38">
+          <span class="brand__name">山梨HPかけこみ寺<span class="sub">YAMANASHI HP KAKEKOMIDERA</span></span>
+        </a>
+      </p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="globalNav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav" id="globalNav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="service.html">サービス・料金</a></li>
+          <li><a href="works.html">制作実績</a></li>
+          <li><a href="about.html">かけこみ寺について</a></li>
+          <li><a href="contact.html" class="nav-cta" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- /@parts -->
+
+  <main>
+    <div class="page-head">
+      <div class="container">
+        <h1>お問い合わせ</h1>
+        <p>ご相談は無料です。「こんなお店をやっています」だけでも大丈夫。お好きな方法でご連絡ください。</p>
+      </div>
+    </div>
+
+    <!-- 2つの連絡手段（Instagram / メール）。電話欄は作らない。 -->
+    <section class="section" aria-labelledby="ways-title">
+      <div class="container">
+        <h2 class="sr-only" id="ways-title">連絡方法</h2>
+        <div class="contact-grid">
+
+          <div class="contact-card contact-card--insta reveal">
+            <span class="contact-card__ico" aria-hidden="true">📷</span>
+            <h3 class="contact-card__name">InstagramのDM</h3>
+            <p class="contact-card__handle">@hp_kakekomidera</p>
+            <p class="contact-card__desc">制作の様子も発信しています。フォロー＆DMでお気軽に。いちばん早くつながります。</p>
+            <p><a class="btn btn--primary btn--block" href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener">InstagramでDMを送る</a></p>
+          </div>
+
+          <div class="contact-card contact-card--mail reveal">
+            <span class="contact-card__ico" aria-hidden="true">✉</span>
+            <h3 class="contact-card__name">メール</h3>
+            <p class="contact-card__handle">下のフォーム、またはメールアプリから</p>
+            <p class="contact-card__desc">文章でじっくりご相談したい方はこちら。お店のことを書いて送っていただくとスムーズです。</p>
+            <!-- メール送信先は後日設定。下の mailto: のアドレスを正式なGmailに差し替える。 -->
+            <p><a class="btn btn--momo btn--block" href="mailto:example@gmail.com?subject=ホームページのご相談">メールアプリで送る</a></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- メールフォーム（電話欄なし） -->
+    <section class="section section--alt" aria-labelledby="form-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="section-head__en">CONTACT FORM</span>
+          <h2 class="section-head__ja" id="form-title">フォームでのお問い合わせ</h2>
+        </header>
+        <p class="lead lead--center" style="margin-bottom:var(--space-5)">下記をご記入のうえ送信してください。内容を確認しだい、メールにてご返信します。</p>
+
+        <!-- ============================================================
+             ★ 送信先の設定について（後日対応） ★
+             このフォームは現在「見た目のみ」です。GitHub Pages 等の静的ホスティングでは
+             サーバ処理が動かないため、以下のいずれかで送信を有効化してください。
+
+               【推奨A】Formspree などの無料フォームサービスを使う
+                 1) https://formspree.io/ でフォームを作成し、エンドポイントURLを取得
+                 2) 下の <form> を次のように変更:
+                      action="https://formspree.io/f/xxxxxxx" method="post"
+                    （onsubmit の return false; は削除する）
+
+               【推奨B】Gmail へ直接飛ばす（簡易）
+                 <form> をやめ、各入力を mailto: に組み立てるか、
+                 上部「メールアプリで送る」ボタンの mailto: 運用に寄せる。
+
+             ※ 送信先のGmailアドレスは未設定です。Aを使う場合はFormspree側に登録、
+               Bや mailto: の場合は本ファイル内の "example@gmail.com" を実アドレスに置換。
+             ============================================================ -->
+        <form class="form form--2col" action="#" method="post"
+              onsubmit="alert('このフォームは現在準備中です。お手数ですが、InstagramのDM（@hp_kakekomidera）またはメールでご連絡ください。'); return false;">
+          <div class="form__row">
+            <label for="name">お名前・屋号 <span class="req">必須</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form__row">
+            <label for="email">メールアドレス <span class="req">必須</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="返信先のアドレス">
+          </div>
+          <div class="form__row form__row--full">
+            <label for="kind">ご相談の種類</label>
+            <select id="kind" name="kind">
+              <option>新しくホームページを作りたい</option>
+              <option>今あるサイトを作り直したい・引っ越したい</option>
+              <option>料金について聞きたい</option>
+              <option>まだ決めていない・とりあえず相談したい</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form__row form__row--full">
+            <label for="shop">お店のこと（業種・場所・雰囲気など）</label>
+            <input type="text" id="shop" name="shop" placeholder="例：市川三郷町の小さなカフェ">
+          </div>
+          <div class="form__row form__row--full">
+            <label for="message">ご相談内容 <span class="req">必須</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="やりたいこと、不安なこと、ご予算の目安など、なんでもお書きください。"></textarea>
+          </div>
+          <div class="form__row form__row--full">
+            <button type="submit" class="btn btn--primary btn--block btn--lg">送信する</button>
+            <p class="form__note">※ このフォームは現在準備中です。送信先（メール）は後日設定します。それまではInstagramのDM、または上のメールボタンからご連絡ください。電話の窓口はありません。</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- @parts: footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h3>山梨HPかけこみ寺</h3>
+          <p>山梨の小さなお店のためのホームページ屋。<br>作って終わりにせず、公開後もずっと一緒に守ります。</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="フッターメニュー">
+          <h3>メニュー</h3>
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="service.html">サービス・料金</a></li>
+            <li><a href="works.html">制作実績</a></li>
+            <li><a href="about.html">かけこみ寺について</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>運営・お問い合わせ</h3>
+          <dl>
+            <dt>運営</dt><dd>山梨HPかけこみ寺</dd>
+            <dt>所在</dt><dd>山梨県市川三郷町（詳細非公開）</dd>
+            <dt>対応</dt><dd>山梨全域</dd>
+            <dt>連絡</dt><dd><a href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener">Instagram @hp_kakekomidera</a> ／ メール</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="footer-note">
+        © <strong>山梨HPかけこみ寺</strong> ／ 顔は出していませんが、最初から最後まで同じ人間が責任を持って対応します。<br>
+        お電話の窓口は設けておりません。ご連絡はInstagramのDMまたはメールでお願いいたします。
+      </p>
+    </div>
+  </footer>
+  <!-- /@parts -->
+
+  <!-- @parts: action-bar -->
+  <nav class="action-bar" aria-label="クイック連絡">
+    <a class="action-bar__insta" href="https://www.instagram.com/hp_kakekomidera/" target="_blank" rel="noopener"><span class="action-bar__ico">📷</span>Instagram</a>
+    <a class="action-bar__mail" href="mailto:example@gmail.com?subject=ホームページのご相談"><span class="action-bar__ico">✉</span>メール</a>
+  </nav>
+  <!-- /@parts -->
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
