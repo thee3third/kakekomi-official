@@ -22,6 +22,5 @@
       <circle cx="0" cy="55" r="15" fill="#F2A3AB"/>
     </g>
   </g>
-  <text x="290" y="118" font-size="58" font-weight="700" fill="#2B2B2B" letter-spacing="4">山梨<tspan fill="#27406B">HP</tspan>かけこみ寺</text>
-  <text x="294" y="168" font-size="20" font-weight="500" fill="#8A8580" letter-spacing="6">お店のホームページ 制作と管理</text>
+  <text x="290" y="135" font-size="58" font-weight="700" fill="#2B2B2B" letter-spacing="4">山梨<tspan fill="#27406B">HP</tspan>かけこみ寺</text>
 </svg>
