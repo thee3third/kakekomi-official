@@ -36,8 +36,9 @@
 
 ### `header`（ヘッダー）※全ページ共通＝同一HTMLを複製
 - **用途**：ロゴ＋グローバルナビ。スマホはハンバーガー（`main.js` が開閉）。
-- **差し替え**：`brand__logo`（`assets/img/logo.svg`）、`brand__name`、ナビ項目。現在ページのリンクに `aria-current="page"`。お問い合わせは `.nav-cta`（藍の塗りボタン）。
-- **色**：`--color-bg` / `--color-ai`（現在ページ下線は `--color-momo`）。
+- **差し替え**：`brand__logo`（横長ロゴ `assets/img/logo.svg`。屋号文字を含むので画像のみ表示＝テキスト屋号は持たない）、ナビ項目。現在ページのリンクに `aria-current="page"`。お問い合わせは `.nav-cta`（藍の塗りボタン）。
+- **ロゴ高さ**：`.brand__logo` は `height: var(--logo-h, 40px); width:auto` で縦横比維持。大きさ調整は `:root` か `.site-header` に `--logo-h` を指定（例 `--logo-h: 44px`）。画像の `width/height` 属性は実比（790:230）に合わせた目安値。
+- **色**：`--color-bg` / `--color-ai`（現在ページ下線は `--color-momo`）。ロゴ画像内の地色は本紙 `#FCFAF6` でヘッダー背景と一致。
 - **注意**：6ファイルに複製。ナビ項目を増減したら全ページに反映する。
 
 ### `action-bar`（固定アクションバー）※スマホのみ・全ページ複製
