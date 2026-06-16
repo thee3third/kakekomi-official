@@ -1,28 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="山梨HPかけこみ寺">
-  <!-- ============================================================
-       仮ロゴ（プレースホルダー）。正式ロゴ支給時はこのファイルを
-       そのまま差し替えれば全ページのヘッダー・favicon系に反映されます。
-       モチーフ：障子越しにともる桃色の灯り＋「寺」。
-       配色は :root と統一（藍 #27406B / 桃 #F2A3AB / 生成り #FCFAF6）。
-       ============================================================ -->
-  <defs>
-    <radialGradient id="lamp" cx="50%" cy="40%" r="62%">
-      <stop offset="0%"  stop-color="#FCE3E6"/>
-      <stop offset="55%" stop-color="#F2A3AB"/>
-      <stop offset="100%" stop-color="#E07F89"/>
-    </radialGradient>
-  </defs>
-  <!-- 藍の角丸地 -->
-  <rect width="64" height="64" rx="14" fill="#27406B"/>
-  <!-- 灯り（桃のともしび） -->
-  <circle cx="32" cy="29" r="17" fill="url(#lamp)"/>
-  <!-- 障子の桟（縦横） -->
-  <g stroke="#27406B" stroke-width="2" opacity=".9">
-    <line x1="32" y1="12" x2="32" y2="46"/>
-    <line x1="15" y1="29" x2="49" y2="29"/>
+<svg viewBox="0 0 790 230" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans CJK JP','Noto Sans JP',sans-serif">
+  <rect width="790" height="230" fill="#FCFAF6"/>
+  <g transform="translate(140,0) scale(0.72)">
+    <path d="M -36 62 L 36 62
+             C 64 64, 108 86, 150 120
+             C 155 124, 152 131, 146 129
+             C 112 118, 60 92, 0 92
+             C -60 92, -112 118, -146 129
+             C -152 131, -155 124, -150 120
+             C -108 86, -64 64, -36 62 Z" fill="#27406B"/>
+    <rect x="-44" y="54" width="88" height="12" rx="6" fill="#27406B"/>
+    <rect x="-118" y="144" width="17" height="100" rx="8.5" fill="#27406B"/>
+    <rect x="101"  y="144" width="17" height="100" rx="8.5" fill="#27406B"/>
+    <rect x="-150" y="250" width="300" height="9" rx="4.5" fill="#2B2B2B"/>
+    <g transform="translate(0,150)">
+      <rect x="-62" y="0" width="124" height="80" rx="13" fill="#FCFAF6" stroke="#2B2B2B" stroke-width="7"/>
+      <line x1="-58" y1="27" x2="58" y2="27" stroke="#2B2B2B" stroke-width="5.5"/>
+      <circle cx="-44" cy="14" r="5" fill="#F2A3AB"/>
+      <circle cx="-27" cy="14" r="5" fill="#CFC9C2"/>
+      <circle cx="-10" cy="14" r="5" fill="#CFC9C2"/>
+      <rect x="-2.5" y="30" width="5" height="11" rx="2.5" fill="#F2A3AB"/>
+      <circle cx="0" cy="55" r="15" fill="#F2A3AB"/>
+    </g>
   </g>
-  <!-- 「寺」の字（生成り） -->
-  <text x="32" y="38" text-anchor="middle"
-        font-family="'Shippori Mincho','Yu Mincho',serif"
-        font-size="22" font-weight="700" fill="#FCFAF6">寺</text>
+  <text x="290" y="118" font-size="58" font-weight="700" fill="#2B2B2B" letter-spacing="4">山梨<tspan fill="#27406B">HP</tspan>かけこみ寺</text>
+  <text x="294" y="168" font-size="20" font-weight="500" fill="#8A8580" letter-spacing="6">お店のホームページ 制作と管理</text>
 </svg>
