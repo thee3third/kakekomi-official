@@ -317,7 +317,9 @@ strong { font-weight: 700; }
   box-shadow: var(--shadow-sm); transition: transform .18s, box-shadow .18s;
 }
 .work-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); text-decoration: none; }
-.work-card__media { aspect-ratio: 16 / 10; position: relative; }
+.work-card__media { aspect-ratio: 16 / 10; position: relative; overflow: hidden; background: var(--color-bg-2); }
+/* 実績写真は media 枠いっぱいに cover で収める（.ph ダミーから <img> へ差し替え時も同じ枠） */
+.work-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .work-card__tag {
   position: absolute; top: var(--space-3); left: var(--space-3); z-index: 2;
   font-size: .72rem; font-weight: 700; letter-spacing: .04em;
