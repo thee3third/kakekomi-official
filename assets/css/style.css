@@ -334,6 +334,33 @@ strong { font-weight: 700; }
 .work-card__desc { font-size: .92rem; color: var(--color-text); flex: 1; }
 .work-card__link { font-size: .9rem; font-weight: 700; color: var(--color-ai); display: inline-flex; align-items: center; gap: .3em; }
 .work-card:hover .work-card__link { color: var(--color-momo-deep); }
+
+/* 種別グループの小見出し（カード上のバッジに代わり、見出しで実績／サンプルを分ける） */
+.works-group + .works-group { margin-top: var(--space-6); }
+.works-group__head { margin-bottom: var(--space-4); }
+.works-group__title { font-size: 1.25rem; color: var(--color-ai); display: flex; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
+.works-group__note { font-size: .85rem; font-weight: 400; color: var(--color-mute); }
+
+/* 注目カード（実績1件を横長で大きく：画像左＋テキスト右。モバイルは縦積み） */
+.work-feature {
+  display: grid; grid-template-columns: 1fr; background: var(--color-paper);
+  border: 1px solid var(--color-line); border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: transform .18s, box-shadow .18s;
+}
+.work-feature:hover { transform: translateY(-4px); box-shadow: var(--shadow); text-decoration: none; }
+.work-feature__media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--color-bg-2); }
+.work-feature__media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.work-feature__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); justify-content: center; }
+.work-feature__kind { font-size: .82rem; color: var(--color-momo-deep); letter-spacing: .08em; font-weight: 700; }
+.work-feature__title { font-size: 1.5rem; color: var(--color-ai); }
+.work-feature__desc { font-size: .98rem; color: var(--color-text); }
+.work-feature__link { font-size: .95rem; font-weight: 700; color: var(--color-ai); display: inline-flex; align-items: center; gap: .3em; margin-top: var(--space-1); }
+.work-feature:hover .work-feature__link { color: var(--color-momo-deep); }
+@media (min-width: 768px) {
+  .work-feature { grid-template-columns: 1.05fr 1fr; align-items: stretch; }
+  .work-feature__media { aspect-ratio: auto; height: 100%; }
+  .work-feature__body { padding: var(--space-6); }
+}
 /* /@parts */
 
 /* 13. ===================================================================== */
