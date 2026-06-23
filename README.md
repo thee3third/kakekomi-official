@@ -49,7 +49,7 @@ kakekomi-official/
    フォーム送信は静的ホスティングでは動かないため、Formspree 等の利用を推奨（`contact.html` 内コメント参照）。
 2. **Instagramアカウント** … 公開済みか確認（`hp_kakekomidera`）。
 3. **OGP画像** … `assets/img/ogp.png`（1200×630）を用意（`assets/img/ogp-placeholder.txt` 参照）。
-4. **実績リンク** … `works.html` / `index.html` のカーオーディオ専門店 `href="https://example.com/"` を実URLへ。
+4. **実績リンク** … カーオーディオ専門店は `https://caraudio-flex.com/` に設定済み。新規実績はカードを複製して `href` を差し替え。
 5. **正式ロゴ** … 支給されたら `assets/img/logo.svg` を同名で差し替え。
 6. **写真** … `.ph`（CSSダミー）を `<img>` へ（`撮影リスト.md` 参照）。
 
