@@ -443,6 +443,9 @@ input[type="range"].sim-range::-moz-range-thumb {
 .plan-card__sub { font-size: .9rem; color: var(--color-mute); }
 .plan-card__monthly { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px dashed var(--color-line-2); font-size: .95rem; }
 .plan-card__monthly b { color: var(--color-ai); font-family: var(--font-heading); font-size: 1.15rem; }
+/* プランカード内の機能リスト（LINEプランで使用。○マーカーは inc-list--yes を流用） */
+.plan-card__feats { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px dashed var(--color-line-2); }
+.plan-card__feats li { font-size: .92rem; }
 
 .inc-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
 .inc-col { background: var(--color-paper); border: 1px solid var(--color-line); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm); }
@@ -492,6 +495,26 @@ input[type="range"].sim-range::-moz-range-thumb {
 .form__row input:focus, .form__row textarea:focus, .form__row select:focus { border-color: var(--color-ai); outline: none; background: #fff; }
 .form__note { font-size: .82rem; color: var(--color-mute); }
 
+/* @parts: faq-accordion（よくあるご質問）
+   <details>/<summary> のネイティブ開閉。既存変数のみで最小装飾。
+   質問の左に ＋／− を表示（開くと −）。 */
+.faq { display: grid; gap: var(--space-3); }
+.faq__item { background: var(--color-paper); border: 1px solid var(--color-line); border-radius: var(--radius); overflow: hidden; }
+.faq__item > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: var(--space-3);
+  padding: var(--space-4); font-weight: 700; color: var(--color-ai); font-family: var(--font-heading);
+}
+.faq__item > summary::-webkit-details-marker { display: none; }
+/* 左の開閉アイコン（＋ → 開くと −）。藍の細枠でボタン風に */
+.faq__item > summary::before {
+  content: "＋"; flex: none; width: 1.4em; height: 1.4em; line-height: 1.3em; text-align: center;
+  border: 1px solid var(--color-line-2); border-radius: 6px; color: var(--color-ai); font-weight: 700;
+}
+.faq__item[open] > summary::before { content: "−"; border-color: var(--color-ai); }
+.faq__item > summary:hover { color: var(--color-ai-deep); }
+.faq__a { padding: 0 var(--space-4) var(--space-4) calc(var(--space-4) + 1.4em + var(--space-3)); color: var(--color-text); font-size: .95rem; }
+/* /@parts */
+
 /* 17. CTAバンド・駆け込み歓迎 ========================================== */
 .cta-band { background: var(--color-ai); color: #fff; border-radius: var(--radius-lg); padding: var(--space-6) var(--space-5); text-align: center; box-shadow: var(--shadow); }
 .cta-band h2 { color: #fff; font-size: clamp(1.4rem, 5vw, 2rem); margin-bottom: var(--space-3); }
@@ -537,6 +560,7 @@ input[type="range"].sim-range::-moz-range-thumb {
   .fee-summary__grid { grid-template-columns: repeat(3, 1fr); }
   .works-grid { grid-template-columns: repeat(2, 1fr); }
   .plan-grid { grid-template-columns: 1fr 1fr; }
+  .plan-grid--three { grid-template-columns: repeat(3, 1fr); }
   .inc-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr 1fr; }
   .welcome-list { grid-template-columns: 1fr 1fr; }
