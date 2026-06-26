@@ -75,7 +75,6 @@
             <h3 class="contact-card__name">メール</h3>
             <p class="contact-card__handle">下のフォーム、またはメールアプリから</p>
             <p class="contact-card__desc">文章でじっくりご相談したい方はこちら。お店のことを書いて送っていただくとスムーズです。</p>
-            <!-- メール送信先は後日設定。下の mailto: のアドレスを正式なGmailに差し替える。 -->
             <p><a class="btn btn--momo btn--block" href="mailto:thee3third@gmail.com?subject=ホームページのご相談">メールアプリで送る</a></p>
           </div>
 
@@ -92,24 +91,6 @@
         </header>
         <p class="lead lead--center" style="margin-bottom:var(--space-5)">下記をご記入のうえ送信してください。内容を確認しだい、メールにてご返信します。</p>
 
-        <!-- ============================================================
-             ★ 送信先の設定について（後日対応） ★
-             このフォームは現在「見た目のみ」です。GitHub Pages 等の静的ホスティングでは
-             サーバ処理が動かないため、以下のいずれかで送信を有効化してください。
-
-               【推奨A】Formspree などの無料フォームサービスを使う
-                 1) https://formspree.io/ でフォームを作成し、エンドポイントURLを取得
-                 2) 下の <form> を次のように変更:
-                      action="https://formspree.io/f/xxxxxxx" method="post"
-                    （onsubmit の return false; は削除する）
-
-               【推奨B】Gmail へ直接飛ばす（簡易）
-                 <form> をやめ、各入力を mailto: に組み立てるか、
-                 上部「メールアプリで送る」ボタンの mailto: 運用に寄せる。
-
-             ※ 送信先のGmailアドレスは未設定です。Aを使う場合はFormspree側に登録、
-               Bや mailto: の場合は本ファイル内の "thee3third@gmail.com" が送信先アドレス。
-             ============================================================ -->
         <form class="form form--2col" id="contactForm"
               action="https://formspree.io/f/maqgoqqj" method="POST">
           <input type="hidden" name="_subject" value="ホームページのご相談（公式サイト）">
