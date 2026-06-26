@@ -110,8 +110,10 @@
              ※ 送信先のGmailアドレスは未設定です。Aを使う場合はFormspree側に登録、
                Bや mailto: の場合は本ファイル内の "thee3third@gmail.com" が送信先アドレス。
              ============================================================ -->
-        <form class="form form--2col" action="#" method="post"
-              onsubmit="alert('このフォームは現在準備中です。お手数ですが、InstagramのDM（@hp_kakekomidera）またはメールでご連絡ください。'); return false;">
+        <form class="form form--2col" id="contactForm"
+              action="https://formspree.io/f/maqgoqqj" method="POST">
+          <input type="hidden" name="_subject" value="ホームページのご相談（公式サイト）">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
           <div class="form__row">
             <label for="name">お名前・屋号 <span class="req">必須</span></label>
             <input type="text" id="name" name="name" autocomplete="name" required>
@@ -139,8 +141,9 @@
             <textarea id="message" name="message" rows="6" required placeholder="やりたいこと、不安なこと、ご予算の目安など、なんでもお書きください。"></textarea>
           </div>
           <div class="form__row form__row--full">
-            <button type="submit" class="btn btn--primary btn--block btn--lg">送信する</button>
-            <p class="form__note">※ このフォームは現在準備中です。送信先（メール）は後日設定します。それまではInstagramのDM、または上のメールボタンからご連絡ください。電話の窓口はありません。</p>
+            <button type="submit" id="contactSubmit" class="btn btn--primary btn--block btn--lg">送信する</button>
+            <p class="form__note">※ 送信ボタンを押すと、その場で送信が完了します。内容を確認しだい、ご記入のメールアドレス宛にご返信します。電話の窓口はありません。InstagramのDM（@hp_kakekomidera）でもご相談いただけます。</p>
+            <p id="formStatus" role="status" aria-live="polite" style="display:none;margin-top:1rem;font-weight:bold;"></p>
           </div>
         </form>
       </div>
@@ -190,6 +193,35 @@
   </nav>
   <!-- /@parts -->
 
+  <script>
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  var btn = document.getElementById('contactSubmit');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var original = btn.textContent;
+    btn.disabled = true; btn.textContent = '送信中…';
+    status.style.display = 'none';
+    fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+    .then(function(res){
+      if(res.ok){
+        form.reset();
+        status.style.color = '#27406B';
+        status.innerHTML = '送信しました。ありがとうございます。<br>内容を確認しだい、メールにてご返信します。';
+        status.style.display = 'block';
+        btn.textContent = '送信しました';
+      } else { throw new Error('failed'); }
+    }).catch(function(){
+      status.style.color = '#b00020';
+      status.innerHTML = '送信に失敗しました。お手数ですが、メール（thee3third@gmail.com）またはInstagramのDM（@hp_kakekomidera）でご連絡ください。';
+      status.style.display = 'block';
+      btn.disabled = false; btn.textContent = original;
+    });
+  });
+})();
+</script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
