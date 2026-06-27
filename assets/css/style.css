@@ -154,10 +154,13 @@ strong { font-weight: 700; }
 .global-nav a:hover { color: var(--color-ai); text-decoration: none; }
 .global-nav a[aria-current="page"] { color: var(--color-ai); border-bottom-color: var(--color-momo); }
 .global-nav .nav-cta {
-  background: var(--color-ai); color: #fff; border-radius: 999px;
+  background: var(--color-ai); color: var(--color-bg); border-radius: 999px;
   padding: .5em 1.1em; border-bottom: 0;
 }
-.global-nav .nav-cta:hover { background: var(--color-ai-deep); color: #fff; }
+/* hover時は「背景だけ濃藍に・文字は生成りのまま」。
+   .global-nav a:hover（color:藍）と詳細度が競合し文字が背景に埋もれていたため、
+   背景色・文字色とも nav-cta 側で明示してコントラストを必ず確保する。 */
+.global-nav a.nav-cta:hover { background: var(--color-ai-deep); color: var(--color-bg); }
 /* /@parts */
 
 /* 5. ====================================================================== */
