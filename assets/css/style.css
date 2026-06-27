@@ -161,6 +161,10 @@ strong { font-weight: 700; }
    .global-nav a:hover（color:藍）と詳細度が競合し文字が背景に埋もれていたため、
    背景色・文字色とも nav-cta 側で明示してコントラストを必ず確保する。 */
 .global-nav a.nav-cta:hover { background: var(--color-ai-deep); color: var(--color-bg); }
+/* 現在ページ（aria-current）でも nav-cta は塗りボタンのまま。
+   .global-nav a[aria-current="page"]（color:藍）に詳細度で勝てるよう a.nav-cta[...] で明示し、
+   文字が藍背景に埋もれないよう生成り文字を維持する。下線も付けない。 */
+.global-nav a.nav-cta[aria-current="page"] { color: var(--color-bg); border-bottom: 0; }
 /* /@parts */
 
 /* 5. ====================================================================== */
