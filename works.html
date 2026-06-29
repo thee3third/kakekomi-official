@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>制作実績｜山梨HPかけこみ寺</title>
-  <meta name="description" content="山梨HPかけこみ寺の制作実績とサンプル。カーオーディオ専門店の実績、居酒屋・桃農園のサンプルサイトをご覧いただけます。それぞれ別タブで開きます。">
+  <meta name="description" content="山梨HPかけこみ寺の制作実績と制作サンプル。カーオーディオ専門店の実際の制作事例、自家焙煎カフェ aoca・エステサロン 静葉のサンプルサイトをご覧いただけます。それぞれ別タブで開きます。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="山梨HPかけこみ寺">
   <meta property="og:title" content="制作実績｜山梨HPかけこみ寺">
@@ -40,6 +40,7 @@
           <li><a href="index.html">トップ</a></li>
           <li><a href="service.html">サービス・料金</a></li>
           <li><a href="works.html" aria-current="page">制作実績</a></li>
+          <li><a href="works.html#samples">制作サンプル</a></li>
           <li><a href="about.html">かけこみ寺について</a></li>
           <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
         </ul>
@@ -64,10 +65,10 @@
       <div class="container">
         <h2 class="sr-only" id="works-title">制作実績一覧</h2>
 
-        <!-- グループ1：実績（注目カード・横長） -->
-        <div class="works-group">
+        <!-- グループ1：制作実績（実在の公開案件・横長の注目カード） -->
+        <div class="works-group" id="works-real">
           <header class="works-group__head">
-            <h3 class="works-group__title">制作実績</h3>
+            <h3 class="works-group__title">制作実績<span class="works-group__note">実際に公開・運用している案件</span></h3>
           </header>
 
           <a class="work-feature reveal" href="https://caraudio-flex.com/" target="_blank" rel="noopener">
@@ -77,61 +78,60 @@
             <div class="work-feature__body">
               <span class="work-feature__kind">カーオーディオ専門店</span>
               <h4 class="work-feature__title">実際の制作事例</h4>
-              <p class="work-feature__desc">こだわりの施工内容と、来店・問い合わせの導線を整理。専門店らしい世界観を伝えるサイトに仕上げました。ヒアリングから公開まで一貫して担当した一例です。</p>
+              <p class="work-feature__desc">こだわりの施工内容と、来店・問い合わせの導線を整理。専門店らしい世界観を伝えるサイトに仕上げました。ヒアリングから公開まで一貫して担当した、実際に公開・運用している案件です。</p>
               <span class="work-feature__link">サイトを見る ↗</span>
             </div>
           </a>
         </div>
 
-        <!-- グループ2：制作例（サンプル・3件グリッド） -->
-        <div class="works-group">
+        <!-- グループ2：制作サンプル（架空のお店の見本・aoca/静葉） -->
+        <div class="works-group" id="samples">
           <header class="works-group__head">
-            <h3 class="works-group__title">制作例（サンプル）<span class="works-group__note">業種のイメージ用・架空サイト</span></h3>
+            <h3 class="works-group__title">制作サンプル<span class="works-group__note">架空のお店の見本</span></h3>
           </header>
+          <p class="lead" style="margin-bottom:var(--space-4)">実在のお店ではありませんが、「このお店だったら」と想像してつくった見本です。</p>
 
-          <div class="works-grid">
+          <div class="samples-grid">
 
-            <a class="work-card reveal" href="https://thee3third.github.io/hair-salon-sample/index.html" target="_blank" rel="noopener">
-              <div class="work-card__media">
-                <img src="assets/img/hair-salon-sample.jpg" alt="美容室サンプルサイト「hair salon こもれび」のスマホ版トップ" width="750" height="1181" loading="lazy">
+            <article class="sample-card reveal">
+              <a class="sample-card__link-wrap" href="https://thee3third.github.io/aoca-sample/" target="_blank" rel="noopener">
+                <div class="sample-card__media">
+                  <img src="assets/img/sample-aoca.webp" alt="自家焙煎カフェ aoca のサンプルサイト" width="1200" height="676" loading="lazy">
+                </div>
+              </a>
+              <div class="sample-card__body">
+                <span class="sample-card__kind">自家焙煎カフェ</span>
+                <h4 class="sample-card__title">aoca</h4>
+                <p class="sample-card__desc">自家焙煎カフェです。「落ち着き」よりも「みずみずしさ」を出したくて、やわらかい緑と素焼きの土の色を基調に、光や湯気のある写真を選びました。オープニングには小さな動きをつけて、入った瞬間から軽やかな空気が伝わるように。言葉は、肩肘張らず気さくに。</p>
+                <!-- 拡張用：将来ここに「もっと詳しく」アコーディオン（<details class="sample-card__more">）を追加できる -->
+                <p class="sample-card__cta">
+                  <a class="btn btn--primary" href="https://thee3third.github.io/aoca-sample/" target="_blank" rel="noopener">サイトを見る ↗</a>
+                </p>
               </div>
-              <div class="work-card__body">
-                <span class="work-card__kind">美容室・サロン</span>
-                <h4 class="work-card__title">hair salon こもれび</h4>
-                <p class="work-card__desc">Instagram集客とLINE予約をひとつの流れにつないだ、サロン向けの構成例です（架空の店舗）。</p>
-                <span class="work-card__link">サンプルを見る ↗</span>
-              </div>
-            </a>
+            </article>
 
-            <a class="work-card reveal" href="https://thee3third.github.io/akariya-sample/" target="_blank" rel="noopener">
-              <div class="work-card__media">
-                <img src="assets/img/izakaya-sample.jpg" alt="居酒屋サンプルサイト「炭火とビール 灯り屋」のスマホ版トップ" width="750" height="1195" loading="lazy">
+            <article class="sample-card reveal">
+              <a class="sample-card__link-wrap" href="https://thee3third.github.io/esthe-sample/" target="_blank" rel="noopener">
+                <div class="sample-card__media">
+                  <img src="assets/img/sample-shizuha.webp" alt="エステサロン 静葉（SHIZUHA）のサンプルサイト" width="1200" height="636" loading="lazy">
+                </div>
+              </a>
+              <div class="sample-card__body">
+                <span class="sample-card__kind">エステサロン</span>
+                <h4 class="sample-card__title">静葉（SHIZUHA）</h4>
+                <p class="sample-card__desc">エステサロンです。施術の静けさを表現するため、色数を抑え、余白を大きくとりました。写真の枠はあえて空けています ── ここに入るのは、お店ごとの実際の施術写真。足すのは簡単でも、引くのは難しい。その引き算が、上質な落ち着きをつくると考えました。</p>
+                <!-- 拡張用：将来ここに「もっと詳しく」アコーディオン（<details class="sample-card__more">）を追加できる -->
+                <p class="sample-card__cta">
+                  <a class="btn btn--primary" href="https://thee3third.github.io/esthe-sample/" target="_blank" rel="noopener">サイトを見る ↗</a>
+                </p>
               </div>
-              <div class="work-card__body">
-                <span class="work-card__kind">飲食店（居酒屋）</span>
-                <h4 class="work-card__title">炭火とビール 灯り屋</h4>
-                <p class="work-card__desc">スマホから電話・地図にすぐ飛べる、飲食店向けの構成例です。メニュー表やアクセス案内も。掲載内容はすべて架空のサンプルです。</p>
-                <span class="work-card__link">サンプルを見る ↗</span>
-              </div>
-            </a>
-
-            <a class="work-card reveal" href="https://thee3third.github.io/momoen-sample/" target="_blank" rel="noopener">
-              <div class="work-card__media">
-                <img src="assets/img/momoen-sample.jpg" alt="桃農園サンプルサイトのスマホ版トップ" width="750" height="1186" loading="lazy">
-              </div>
-              <div class="work-card__body">
-                <span class="work-card__kind">農園・通販</span>
-                <h4 class="work-card__title">桃農園サイト</h4>
-                <p class="work-card__desc">旬の品種紹介や、直売・通販の案内をまとめた農園向けの構成例です。季節商品を扱うお店の参考に。掲載内容はすべて架空のサンプルです。</p>
-                <span class="work-card__link">サンプルを見る ↗</span>
-              </div>
-            </a>
+            </article>
 
           </div>
         </div>
 
         <p class="text-mute center" style="margin-top:var(--space-5);font-size:.9rem">
-          ※ 「制作例（サンプル）」は、業種のイメージをつかんでいただくための架空サイトです。店名・住所・価格などはすべてサンプル用の架空のものです。
+          ※ 「制作サンプル」は、業種のイメージをつかんでいただくための架空サイトです。店名・価格などはすべてサンプル用の架空のものです。
         </p>
       </div>
     </section>

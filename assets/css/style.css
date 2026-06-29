@@ -370,6 +370,41 @@ strong { font-weight: 700; }
 }
 /* /@parts */
 
+/* @parts: samples-grid（制作サンプル：架空のお店の見本。aoca・静葉の2枚）
+   サムネは16:9で統一。カードはホバーで軽く浮く。スマホ1列→768pxで2列。
+   将来 .sample-card__body 内に「もっと詳しく」アコーディオン（details）を足せる。 */
+.samples-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+.sample-card {
+  display: flex; flex-direction: column; background: var(--color-paper);
+  border: 1px solid var(--color-line); border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: transform .18s, box-shadow .18s;
+}
+.sample-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.sample-card__link-wrap { display: block; }
+.sample-card__media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--color-bg-2); }
+.sample-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+.sample-card:hover .sample-card__media img { transform: scale(1.03); }
+.sample-card__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+.sample-card__kind { font-size: .82rem; color: var(--color-momo-deep); letter-spacing: .08em; font-weight: 700; }
+.sample-card__title { font-size: 1.45rem; color: var(--color-ai); }
+.sample-card__desc { font-size: .95rem; color: var(--color-text); flex: 1; }
+.sample-card__cta { margin-top: var(--space-3); }
+
+/* トップ用の抜粋サムネ（軽い見せ方。詳細は works.html）。2枚横並び→スマホ縦積み */
+.sample-thumbs { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+.sample-thumb { display: block; color: inherit; }
+.sample-thumb:hover { text-decoration: none; }
+.sample-thumb__media {
+  aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--radius-lg);
+  border: 1px solid var(--color-line); background: var(--color-bg-2);
+  box-shadow: var(--shadow-sm); transition: transform .18s, box-shadow .18s;
+}
+.sample-thumb:hover .sample-thumb__media { transform: translateY(-4px); box-shadow: var(--shadow); }
+.sample-thumb__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sample-thumb__kind { display: block; margin-top: var(--space-2); font-size: .78rem; font-weight: 700; letter-spacing: .08em; color: var(--color-momo-deep); }
+.sample-thumb__name { display: block; font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-ai); }
+/* /@parts */
+
 /* 13. ===================================================================== */
 /* @parts: fee-simulator（料金シミュレーター）★このサイトの目玉
    素のJSで駆動（assets/js/simulator.js）。価格定数はJS側に集約。
@@ -566,6 +601,8 @@ input[type="range"].sim-range::-moz-range-thumb {
   .strength-grid { grid-template-columns: repeat(3, 1fr); }
   .fee-summary__grid { grid-template-columns: repeat(3, 1fr); }
   .works-grid { grid-template-columns: repeat(2, 1fr); }
+  .samples-grid { grid-template-columns: repeat(2, 1fr); }
+  .sample-thumbs { grid-template-columns: repeat(2, 1fr); }
   .plan-grid { grid-template-columns: 1fr 1fr; }
   .plan-grid--three { grid-template-columns: repeat(3, 1fr); }
   .inc-grid { grid-template-columns: 1fr 1fr; }
